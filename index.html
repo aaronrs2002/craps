@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/brands.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/solid.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="themedStyle">
+    <link href="css/style.css" rel="stylesheet" />
+
+    <title>Craps</title>
+</head>
+
+<body>
+
+
+
+
+
+
+    <div class="container">
+        <div class="row">
+
+            <div class="btn-group form-control" role="group">
+                <button type="button" class="btn btn-primary betAmount" alt="2" onClick="bet(Number(2))">$2</button>
+                <button type="button" class="btn btn-primary betAmount" alt="10" onClick="bet(Number(10))">$10</button>
+                <button type="button" class="btn btn-primary betAmount" alt="50" onClick="bet(Number(50))">$50</button>
+                <button type="button" class="btn btn-primary betAmount" alt="100"
+                    onClick="bet(Number(100))">$100</button>
+            </div>
+            <div class="col-4">
+                <h2 id="playerTotalMoney"></h2>
+            </div>
+            <div class="col-4">
+                <h2 id="currentBet"></h2>
+            </div>
+            <div class="col-4">
+                <h2 id="pointNumber"></h2>
+            </div>
+            <div class="col-md-12">
+
+
+                <div data-num id="diceOne"></div>
+                <div data-num id="diceTwo"></div>
+                <div class="alert alert-info hide" role="alert">
+                    <h2 id="diceTotal"></h2>
+                </div>
+
+            </div>
+            <div class="d-grid gap-2 col-12 mx-auto">
+                <div class="alert alert-primary hide" role="alert">
+                    <h2 id="rollStatus"></h2>
+                </div>
+                <button class="btn btn-block btn-success hide" id="rollBt" onClick="rollDice()">Roll Dice</button>
+            </div>
+            <div class="col-md-12">
+                <h4>Craps rules:</h4>
+                <p>An even money bet, made on the first roll of the dice (known as the “come out roll”). You win if a 7
+                    or 11 roll, or lose if 2, 3, or 12 roll (known as "craps"). Any other number that rolls becomes the
+                    “point” and the point must roll again before a 7 to win.</p>
+            </div>
+
+        </div>
+    </div>
+    <footer class="footer mt-auto py-3 animated fadeInUp">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3" id="socialList">
+
+                </div>
+
+                <div class="col-md-6">
+                    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto mx-5">
+                        <a class="py-2 btn btn-info"
+                            href="https://mechanized-aesthetics.net/TEST/black-jack/index.html">Black
+                            Jack</a>
+                        <a class="py-2 btn btn-info "
+                            href="https://mechanized-aesthetics.net/TEST/dice/index.html">Craps</a>
+                    </nav>
+                </div>
+                <div class="col-md-3"> <select class="form-control" onChange="changeTheme()" id="themes"></select></div>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/footer.js"></script>
+    <script src="js/functionality.js"></script>
+    <script src="js/themesList.js"></script>
+</body>
+
+</html>

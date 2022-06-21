@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css?family=Passion+One|Raleway&display=swap");
+
+body {
+    font-family: "Raleway", sans-serif;
+    font-size: 1rem;
+
+    /* background: url("../img/cardBG.jpg");*/
+
+
+
+
+}
+
+body:after {
+    content: "";
+    background: url("../img/cardBG.jpg");
+
+    opacity: .3;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: fixed;
+    z-index: -1;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: "Passion One", cursive;
+}
+
+.hide {
+    display: none !important;
+}
+
+.btn-group.form-control {
+    padding: 0;
+
+}
+
+/*START FOOTER*/
+footer {
+    box-shadow: 0 -4px 3px rgb(0 0 0 / 8%);
+
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    text-align: center;
+}
+
+
+/*START DICE CSS HERE*/
+
+[data-num] {
+    background-image: url('../img/dice.jpg');
+    background-repeat: no-repeat;
+    padding: 5px;
+    margin: 0px 5px;
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    border: 1px rgb(2, 96, 18) solid;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+[data-num='1'] {
+    background-position: -2px -2px;
+
+}
+
+[data-num='2'] {
+    background-position: -65px -2px;
+}
+
+[data-num='3'] {
+    background-position: -127px -2px;
+}
+
+[data-num='4'] {
+    background-position: -189px -2px;
+}
+
+[data-num='5'] {
+    background-position: -254px -2px;
+}
+
+[data-num='6'] {
+    background-position: -316px -2px;
+}
