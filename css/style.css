@@ -25,6 +25,12 @@ body:after {
 
 }
 
+.btn-group.block {
+    width: 100%;
+    padding: 0px;
+}
+
+
 h1,
 h2,
 h3,
