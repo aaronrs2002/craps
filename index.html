@@ -15,6 +15,15 @@
     <link href="css/style.css" rel="stylesheet" />
 
     <title>Craps</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JJWFFXF8G0"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-JJWFFXF8G0');
+    </script>
 </head>
 
 <body>
@@ -72,27 +81,18 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-3" id="socialList">
-
                 </div>
-
                 <div class="col-md-6">
-                    <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto mx-5">
-                        <a class="py-2 btn btn-info"
-                            href="https://mechanized-aesthetics.net/TEST/black-jack/index.html">Black
-                            Jack</a>
-                        <a class="py-2 btn btn-info "
-                            href="https://mechanized-aesthetics.net/TEST/dice/index.html">Craps</a>
-                    </nav>
+                    <div class="btn-group block" role="group" id="gameLinks"></div>
                 </div>
                 <div class="col-md-3"> <select class="form-control" onChange="changeTheme()" id="themes"></select></div>
-
             </div>
         </div>
     </footer>
 
-    <script src="js/footer.js"></script>
+    <script src="https://mechanized-aesthetics.net/TEST/black-jack/js/footer.js"></script>
     <script src="js/functionality.js"></script>
-    <script src="js/themesList.js"></script>
+    <script src="https://mechanized-aesthetics.net/TEST/black-jack/js/themesList.js"></script>
 </body>
 
 </html>
