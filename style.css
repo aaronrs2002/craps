@@ -53,6 +53,11 @@ footer {
     text-align: center;
 }
 
+#socialList a i {
+    font-size: 1.5rem;
+
+}
+
 
 /*START DICE CSS HERE*/
 
