@@ -59,6 +59,13 @@ footer {
     text-align: center;
 }
 
+#socialList a i {
+    font-size: 1.5rem;
+    padding: 12px 10px;
+
+}
+
+
 
 /*START DICE CSS HERE*/
 
@@ -98,3 +105,12 @@ footer {
 [data-num='6'] {
     background-position: -316px -2px;
 }
+
+@media (max-width: 767px) {
+    #socialList a i {
+        padding: 12px 10px 25px 10px;
+
+    }
+}
+
+/*end 767*/
