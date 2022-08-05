@@ -2,6 +2,9 @@ let diceArr = [];
 let diceTotal = Number();
 let pointTotal = null;
 let playerTotalMoney = 500;
+if (localStorage.getItem("balance") && Number(localStorage.getItem("balance"))) {
+    playerTotalMoney = Number(localStorage.getItem("balance"));
+}
 document.getElementById("playerTotalMoney").innerHTML = "Balance: $" + playerTotalMoney;
 let betAmount = 0;
 
@@ -11,6 +14,7 @@ function reset(winLose) {
     } else {
         playerTotalMoney = playerTotalMoney - betAmount;
     }
+    localStorage.setItem("balance", playerTotalMoney);
     document.getElementById("playerTotalMoney").innerHTML = "Balance: $" + playerTotalMoney;
     document.getElementById("currentBet").innerHTML = "";
     document.getElementById("rollBt").classList.add("hide");
