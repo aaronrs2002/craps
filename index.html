@@ -36,37 +36,52 @@
     <div class="container">
         <div class="row">
 
-            <div class="btn-group form-control" role="group">
+            <div class="btn-group form-control mb-2" role="group">
                 <button type="button" class="btn btn-primary betAmount" alt="2" onClick="bet(Number(2))">$2</button>
                 <button type="button" class="btn btn-primary betAmount" alt="10" onClick="bet(Number(10))">$10</button>
                 <button type="button" class="btn btn-primary betAmount" alt="50" onClick="bet(Number(50))">$50</button>
                 <button type="button" class="btn btn-primary betAmount" alt="100"
                     onClick="bet(Number(100))">$100</button>
             </div>
-            <div class="col-4">
-                <h2 id="playerTotalMoney"></h2>
-            </div>
-            <div class="col-4">
-                <h2 id="currentBet"></h2>
-            </div>
-            <div class="col-4">
-                <h2 id="pointNumber"></h2>
+            <div class="col-md-12">
+                <div class="alert alert-info" role="alert">
+                    <h3 id="playerTotalMoney"></h3>
+                </div>
+
             </div>
             <div class="col-md-12">
+                <div class="alert alert-light" role="alert">
+
+                    <ul class="list-unstyled">
+
+                        <li>
+                            <h3 id="currentBet"></h3>
+                        </li>
+                        <li>
+                            <h3 id="pointNumber"></h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-md-12 d-flex justify-content-center">
 
 
                 <div data-num id="diceOne"></div>
                 <div data-num id="diceTwo"></div>
-                <div class="alert alert-info hide" role="alert">
-                    <h2 id="diceTotal"></h2>
+
+            </div>
+            <div class="col-md-12">
+                <div class="alert alert-light hide form-control" role="alert">
+                    <h3 id="diceTotal"></h3>
                 </div>
 
             </div>
             <div class="d-grid gap-2 col-12 mx-auto">
-                <div class="alert alert-primary hide" role="alert">
+                <div class="alert alert-light hide" role="alert">
                     <h2 id="rollStatus"></h2>
                 </div>
-                <button class="btn btn-block btn-success hide" id="rollBt" onClick="rollDice()">Roll Dice</button>
+                <button class="btn btn-block btn-success my-2 hide" id="rollBt" onClick="rollDice()">Roll Dice</button>
             </div>
             <div class="col-md-12">
                 <h4>Craps rules:</h4>

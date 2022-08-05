@@ -25,7 +25,7 @@ function reset(winLose) {
         document.getElementById("pointNumber").innerHTML = null;
 
         if (document.querySelectorAll(".alert")) {
-            [].forEach.call(document.querySelectorAll(".alert"), function (e) {
+            [].forEach.call(document.querySelectorAll(".alert-light"), function (e) {
                 e.classList.add("hide");
             })
         }
