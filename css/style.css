@@ -74,14 +74,16 @@ footer a {
 
 [data-num] {
     background-image: url('../img/dice.jpg');
+
     background-repeat: no-repeat;
     padding: 5px;
     margin: 0px 5px;
     display: inline-block;
     height: 60px;
     width: 60px;
-    border: 1px rgb(2, 96, 18) solid;
+    border: 1px #FFF solid;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 10px;
 }
 
 [data-num='1'] {
