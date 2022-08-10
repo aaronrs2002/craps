@@ -16,8 +16,9 @@ function reset(winLose) {
     }
     localStorage.setItem("balance", playerTotalMoney);
     document.getElementById("playerTotalMoney").innerHTML = "Balance: $" + playerTotalMoney;
-    document.getElementById("currentBet").innerHTML = "";
+    document.getElementById("currentBet").innerHTML = "Place your bet.";
     document.getElementById("rollBt").classList.add("hide");
+
     setTimeout(() => {
         diceArr = [];
         diceTotal = Number();
@@ -30,10 +31,13 @@ function reset(winLose) {
             })
         }
 
+
+
         [].forEach.call(document.querySelectorAll(".betAmount"), function (e) {
             e.classList.remove("active");
             e.removeAttribute('disabled');
         });
+        document.getElementById("diceToggle").classList.add("hide");
     }, 3000);
     return false;
 }
@@ -95,6 +99,7 @@ function rollDice() {
 }
 
 function bet(amount) {
+    document.getElementById("diceTotal").innerHTML = "";
     [].forEach.call(document.querySelectorAll(".betAmount"), function (e) {
         e.classList.remove("active");
         e.setAttribute('disabled', 'true');
@@ -102,5 +107,6 @@ function bet(amount) {
     document.getElementById("currentBet").innerHTML = "Current Bet: " + amount;
     document.querySelector(".betAmount[alt='" + amount + "']").classList.add("active");
     document.getElementById("rollBt").classList.remove("hide");
+    document.getElementById("diceToggle").classList.remove("hide");
     betAmount = amount;
 }

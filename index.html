@@ -50,41 +50,53 @@
                 </div>
 
             </div>
-            <div class="col-md-12">
-                <div class="alert alert-light hide" role="alert">
+            <div class="col-md-12 hide" id="diceToggle">
 
-                    <ul class="list-unstyled">
 
-                        <li>
-                            <h3 id="currentBet"></h3>
-                        </li>
-                        <li>
-                            <h3 id="pointNumber"></h3>
-                        </li>
-                    </ul>
+
+                <div class="card">
+
+
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-6">
+                                <div data-num id="diceOne"></div>
+                                <div data-num id="diceTwo"></div>
+                            </div>
+
+                            <div class="col-6">
+                                <ul class="list-unstyled">
+                                    <li>
+                                        <label id="currentBet"></label>
+                                    </li>
+                                    <li>
+                                        <label id="diceTotal"></label>
+                                    </li>
+                                    <li>
+                                        <label id="pointNumber"></label>
+                                    </li>
+
+                                </ul>
+
+                            </div>
+                        </div>
+
+
+                    </div>
                 </div>
             </div>
 
-            <div class="col-md-12 d-flex justify-content-center">
-
-
-                <div data-num id="diceOne"></div>
-                <div data-num id="diceTwo"></div>
-
-            </div>
             <div class="col-md-12">
-                <div class="alert alert-light hide form-control" role="alert">
-                    <h3 id="diceTotal"></h3>
-                </div>
-
-            </div>
-            <div class="d-grid gap-2 col-12 mx-auto">
-                <div class="alert alert-light hide" role="alert">
+                <div class="alert alert-light my-2 hide" role="alert">
                     <h2 id="rollStatus"></h2>
                 </div>
+
+            </div>
+            <div class="col-md-12 d-grid gap-2">
+
                 <button class="btn btn-block btn-success my-2 hide" id="rollBt" onClick="rollDice()">Roll Dice</button>
             </div>
-
 
             <div class="col-md-12 py-2">
                 <div class="card">

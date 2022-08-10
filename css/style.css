@@ -39,7 +39,8 @@ h5 {
     font-family: "Passion One", cursive;
 }
 
-.hide {
+.hide,
+[data-num="default"] {
     display: none !important;
 }
 
