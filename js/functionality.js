@@ -16,7 +16,6 @@ function reset(winLose) {
     }
     localStorage.setItem("balance", playerTotalMoney);
     document.getElementById("playerTotalMoney").innerHTML = "Balance: $" + playerTotalMoney;
-    document.getElementById("currentBet").innerHTML = "Place your bet.";
     document.getElementById("rollBt").classList.add("hide");
 
     setTimeout(() => {
@@ -24,6 +23,7 @@ function reset(winLose) {
         diceTotal = Number();
         pointTotal = null;
         document.getElementById("pointNumber").innerHTML = null;
+        document.getElementById("currentBet").innerHTML = "Place your bet.";
 
         if (document.querySelectorAll(".alert")) {
             [].forEach.call(document.querySelectorAll(".alert-light"), function (e) {
