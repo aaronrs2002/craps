@@ -104,7 +104,7 @@ function bet(amount) {
         e.classList.remove("active");
         e.setAttribute('disabled', 'true');
     });
-    document.getElementById("currentBet").innerHTML = "Current Bet: " + amount;
+    document.getElementById("currentBet").innerHTML = "Current Bet: $" + amount;
     document.querySelector(".betAmount[alt='" + amount + "']").classList.add("active");
     document.getElementById("rollBt").classList.remove("hide");
     document.getElementById("diceToggle").classList.remove("hide");
