@@ -118,7 +118,15 @@
             </div>
 
             <div class="col-md-12 py-2">
-                <div class="card">
+
+                <div class="d-grid gap-2">
+                    <button class="btn btn-info" onClick="javascript:toggle('rules')" type="button"
+                        data-toggle="default">View Rules</button>
+                    <button class="btn btn-info hide" onClick="javascript:toggle('default')" type="button"
+                        data-toggle="rules">Hide Rules</button>
+                </div>
+
+                <div class="card hide" data-toggle="rules">
                     <div class="card-body">
                         <h5 class="card-title">Craps rules:</h5>
                         <p>An even money bet, made on the first roll of the dice (known as the "come out roll"). You win
