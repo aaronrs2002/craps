@@ -17,29 +17,32 @@ function reset(winLose) {
     localStorage.setItem("balance", playerTotalMoney);
     document.getElementById("playerTotalMoney").innerHTML = "Balance: $" + playerTotalMoney;
     document.getElementById("rollBt").classList.add("hide");
+    document.getElementById("playAgainBt").classList.remove("hide");
 
-    setTimeout(() => {
-        diceArr = [];
-        diceTotal = Number();
-        pointTotal = null;
-        document.getElementById("pointNumber").innerHTML = null;
-        document.getElementById("currentBet").innerHTML = "Place your bet.";
-
-        if (document.querySelectorAll(".alert")) {
-            [].forEach.call(document.querySelectorAll(".alert-light"), function (e) {
-                e.classList.add("hide");
-            })
-        }
-
-
-
-        [].forEach.call(document.querySelectorAll(".betAmount"), function (e) {
-            e.classList.remove("active");
-            e.removeAttribute('disabled');
-        });
-        document.getElementById("diceToggle").classList.add("hide");
-    }, 3000);
     return false;
+}
+
+function playAgain() {
+    diceArr = [];
+    diceTotal = Number();
+    pointTotal = null;
+    document.getElementById("pointNumber").innerHTML = null;
+    document.getElementById("currentBet").innerHTML = "Place your bet.";
+
+    if (document.querySelectorAll(".alert")) {
+        [].forEach.call(document.querySelectorAll(".alert-light"), function (e) {
+            e.classList.add("hide");
+        })
+    }
+
+
+
+    [].forEach.call(document.querySelectorAll(".betAmount"), function (e) {
+        e.classList.remove("active");
+        e.removeAttribute('disabled');
+    });
+    document.getElementById("diceToggle").classList.add("hide");
+    document.getElementById("playAgainBt").classList.add("hide");
 }
 
 
@@ -80,7 +83,7 @@ function calculate(diceTotal) {
 
 function rollDice() {
     if (document.querySelectorAll(".alert")) {
-        [].forEach.call(document.querySelectorAll(".hide"), function (e) {
+        [].forEach.call(document.querySelectorAll("div.hide"), function (e) {
             e.classList.remove("hide");
         });
     }
