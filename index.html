@@ -82,13 +82,13 @@
                             </div>
 
                             <div class="col-6">
-                                <ul class="list-unstyled">
+                                <ul class="list-group">
 
-                                    <li>
-                                        <label id="diceTotal"></label>
+                                    <li class="list-group-item">
+                                        <h4 id="diceTotal"></h4>
                                     </li>
-                                    <li>
-                                        <label id="pointNumber"></label>
+                                    <li class="list-group-item">
+                                        <h4 id="pointNumber"></h4>
                                     </li>
 
                                 </ul>
@@ -106,14 +106,20 @@
             </div>
 
             <div class="col-md-12 mt-2">
-                <div class="alert alert-light my-2 hide" role="alert">
+                <div class="alert alert-light my-2 hide" role="alert" id="statusBox">
                     <h2 id="rollStatus"></h2>
                 </div>
 
             </div>
             <div class="col-md-12 d-grid gap-2">
 
-                <button class="btn btn-block btn-success my-2 hide p-2" id="rollBt" onClick="rollDice()">Roll
+                <button class="btn btn-block btn-success my-2 hide p-2" id="rollBt" onClick="rollDice(true)">Roll
+                    Dice</button>
+            </div>
+            <div class="col-md-12 d-grid gap-2 hide">
+
+                <button class="btn btn-block btn-success my-2 hide p-2" id="stopRollBt" onClick="rollDice(false)">Stop
+                    Roll
                     Dice</button>
             </div>
 
