@@ -34,7 +34,6 @@ function reset(winLose) {
     localStorage.setItem("balance", playerTotalMoney);
     document.getElementById("playerTotalMoney").innerHTML = "Balance: $" + playerTotalMoney;
     document.getElementById("rollBt").classList.add("hide");
-    console.log("add hide line 37");
     document.getElementById("playAgainBt").classList.remove("hide");
 
 
@@ -83,7 +82,6 @@ function playAgain() {
 
 function calculate(diceTotal) {
     document.getElementById("rollBt").classList.add("hide");
-    console.log("add hide line 83");
 
     let status = "";
     if (!Number(pointTotal)) {
@@ -133,6 +131,7 @@ function getRandom() {
         document.getElementById("diceTwo").setAttribute("data-num", diceTwo);
 
     }
+    return false;
 }
 
 
@@ -149,12 +148,11 @@ function rollDice(status) {
         document.getElementById("stopRollBt").classList.remove("hide");
 
         document.getElementById("rollBt").classList.add("hide");
-        console.log("add hide line 143");
         random = setInterval(getRandom, 200);
     } else {
-        random = null;
-        clearInterval(random);
 
+        clearInterval(random);
+        random = null;
         document.getElementById("diceTotal").innerHTML = "Rolled: " + diceTotal;
         calculate(diceTotal);
         document.getElementById("stopRollBt").classList.add("hide");
@@ -164,10 +162,9 @@ function rollDice(status) {
             document.getElementById("rollBt").classList.add("hide");
         }
 
-        console.log("remove hide line 153");
     }
 
-
+    return false;
 }
 
 function bet(amount) {
