@@ -116,7 +116,7 @@ function calculate(diceTotal) {
     }
     document.getElementById("rollStatus").innerHTML = status;
     document.getElementById("rollBt").classList.add("hide");
-    console.log("add hide line 117");
+
 }
 
 function getRandom() {
@@ -137,19 +137,23 @@ function getRandom() {
 
 
 function rollDice(status) {
-    if (document.querySelectorAll(".alert")) {
-        [].forEach.call(document.querySelectorAll("div.hide"), function (e) {
-            e.classList.remove("hide");
-        });
-    }
+    /* if (document.querySelectorAll(".alert")) {
+         [].forEach.call(document.querySelectorAll("div.hide"), function (e) {
+             e.classList.remove("hide");
+         });
+     }*/
+
+    document.getElementById("statusBox").classList.remove("hide");
+    document.getElementById("stopRollBt").classList.remove("hide");
     if (status) {
         document.getElementById("stopRollBt").classList.remove("hide");
 
         document.getElementById("rollBt").classList.add("hide");
         console.log("add hide line 143");
-        random = setInterval(getRandom, 150);
+        random = setInterval(getRandom, 200);
     } else {
         random = null;
+        clearInterval(random);
 
         document.getElementById("diceTotal").innerHTML = "Rolled: " + diceTotal;
         calculate(diceTotal);
@@ -175,7 +179,6 @@ function bet(amount) {
     document.getElementById("currentBet").innerHTML = "Current Bet: $" + amount;
     document.querySelector(".betAmount[alt='" + amount + "']").classList.add("active");
     document.getElementById("rollBt").classList.remove("hide");
-    console.log("remove hide line 167");
 
     document.getElementById("diceToggle").classList.remove("hide");
     betAmount = amount;
